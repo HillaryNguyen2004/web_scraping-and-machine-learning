@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataFrame Viewer</title>
+    <style>
+        .button-55 {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="buttons">
+        <button id="b_chai_nuoc" class="button-55" onclick="button_clicked('chai_nuoc')">Show chai_nuoc comments</button><br><br>
+<button id="b_kep_toc" class="button-55" onclick="button_clicked('kep_toc')">Show kep_toc comments</button><br><br>
+<button id="b_op_dien_thoai" class="button-55" onclick="button_clicked('op_dien_thoai')">Show op_dien_thoai comments</button><br><br>
+<button id="b_ao_thun" class="button-55" onclick="button_clicked('ao_thun')">Show ao_thun comments</button><br><br>
+<button id="b_loa_bluetooth" class="button-55" onclick="button_clicked('loa_bluetooth')">Show loa_bluetooth comments</button><br><br>
+
+    </div>
+    <div id="display">
+        <!-- DataFrame content will be displayed here -->
+    </div>
+    <script>
+        function button_clicked(buttonId) {
+            var data = {
+                "ao_thun": `{"columns":["Comments","Sentiment"],"index":[0,1,2,3,4],"data":[["mik \u0111\u1eb7t \u00e1o b\u00f3ng ch\u1ea7y xg l\u1ea1i ra \u00e1o n\u00e0y th\u00ec mik ch\u1ecbu shop n\u00e0y r lm \u0103n th\u00ec th\u1ebf n\u00e0y ch\u1eb3ng m\u1ea5y th\u00ec m\u1ea5t kh\u00e1ch\nM\u00e0u s\u1eafc:\u0110en, K\u00edch c\u1ee1:L\n0","negative"],["Giao h\u00e0ng k \u0111\u00fang, \u0111\u1eb7t \u00e1o b\u00f3ng r\u1ed5 giao 2 \u00e1o thun ch\u1ea5t li\u1ec7u qu\u00e1 x\u1ea5u ch\u1eb3ng gi\u00f4ng m\u1eabu t\u00ed n\u00e0o\nM\u00e0u s\u1eafc:\u0110en, K\u00edch c\u1ee1:L\n0","negative"],["tot cai lon mua mau \u0111en 2cai giao3cai mau vag\nM\u00e0u s\u1eafc:\u0110en, K\u00edch c\u1ee1:XL\n0",null],["Giao sai h\u00e0ng shop l\u00e0m \u0103n m\u1ea5t uy t\u00edn.\n..\nM\u00e0u s\u1eafc:\u0110en, K\u00edch c\u1ee1:L\n0",null],["ch\u1ecbu lazada ch\u1ec9 l\u1eeba ng\u01b0\u1eddi m\u1edbi\nM\u00e0u s\u1eafc:\u0110en, K\u00edch c\u1ee1:M\n0","negative"]]}`,
+                "chai_nuoc": `{"columns":["Comments","Sentiment"],"index":[0,1,2,3,4],"data":[["b\u00ecnh th\u1ee9 2 mua, \u0111\u1ef1ng n\u01b0\u1edbc mang \u0111i h\u1ecdc ok, tuy nhi\u00ean \u0111\u1eebng xo\u00e1y n\u1eafp m\u1ea1nh qu\u00e1, b\u00ecnh c\u0169 c\u1ee7a mk \u0111i \u0111\u1eddi t\u1ea1i xo\u00e1y m\u1ea1nh qu\u00e1 l\u00e0m v\u1ee1 n\u1eafp\nM\u00e0u s\u1eafc:3 blue\n0","positive"],["Ti\u1ec7n l\u1ee3i \u0111\u1ec3 mang theo, Ho\u00e0n h\u1ea3o cho vi\u1ec7c mang theo, Kh\u00f4ng th\u01b0\u01a1ng hi\u1ec7u nh\u01b0ng ch\u1ea5t l\u01b0\u1ee3ng t\u1ed1t, Ch\u1ea5t li\u1ec7u th\u1ee7y tinh b\u1ec1n,\nM\u00e0u s\u1eafc:3 blue\n0","positive"],["Tuy\u1ec7t v\u1eddi cho c\u00e1c ho\u1ea1t \u0111\u1ed9ng ngo\u00e0i tr\u1eddi, M\u00e0u xanh t\u01b0\u01a1i s\u00e1ng, Th\u1eddi trang v\u00e0 c\u00f3 t\u00ednh n\u0103ng, Kh\u00f4ng th\u01b0\u01a1ng hi\u1ec7u nh\u01b0ng ch\u1ea5t l\u01b0\u1ee3ng t\u1ed1t,\nM\u00e0u s\u1eafc:2 pink\n0","positive"],["Ch\u1ea5t li\u1ec7u th\u1ee7y tinh b\u1ec1n, Chai th\u1ee7y tinh \u0111\u1eb9p m\u1eaft, Ho\u00e0n h\u1ea3o cho vi\u1ec7c mang theo, M\u00e0u xanh t\u01b0\u01a1i s\u00e1ng, Th\u1eddi trang v\u00e0 c\u00f3 t\u00ednh n\u0103ng,\nM\u00e0u s\u1eafc:3 blue\n0","positive"],["Gi\u00e1 c\u1ea3 ph\u1ea3i ch\u0103ng, Kh\u00f4ng th\u01b0\u01a1ng hi\u1ec7u nh\u01b0ng ch\u1ea5t l\u01b0\u1ee3ng t\u1ed1t, Chai th\u1ee7y tinh \u0111\u1eb9p m\u1eaft, M\u00e0u xanh t\u01b0\u01a1i s\u00e1ng, M\u00e0u xanh t\u01b0\u01a1i s\u00e1ng,\nM\u00e0u s\u1eafc:2 pink\n0","positive"]]}`,
+                "kep_toc": `{"columns":["Comments","Sentiment"],"index":[0,1,2,3,4],"data":[["Nhi\u1ec1u m\u00e0u s\u1eafc s\u1ed1ng \u0111\u1ed9ng \u0111\u1ec3 l\u1ef1a ch\u1ecdn, Thi\u1ebft k\u1ebf c\u00e1 m\u1eadp \u0111\u1ed9c \u0111\u00e1o mang l\u1ea1i s\u1ef1 vui nh\u1ed9n, Nhi\u1ec1u m\u00e0u s\u1eafc s\u1ed1ng \u0111\u1ed9ng \u0111\u1ec3 l\u1ef1a ch\u1ecdn,\nNh\u00f3m M\u00e0u:4#Red\n0","negative"],["Ho\u00e0n h\u1ea3o cho v\u1ebb ngo\u1ea1i h\u00ecnh th\u01b0\u1eddng ng\u00e0y ho\u1eb7c trang tr\u1ecdng, Thi\u1ebft k\u1ebf c\u00e1 m\u1eadp \u0111\u1ed9c \u0111\u00e1o mang l\u1ea1i s\u1ef1 vui nh\u1ed9n, Ch\u1ea5t li\u1ec7u nh\u1ef1a cao c\u1ea5p gi\u00fap s\u1ea3n ph\u1ea9m b\u1ec1n b\u1ec9, Nhi\u1ec1u m\u00e0u s\u1eafc s\u1ed1ng \u0111\u1ed9ng \u0111\u1ec3 l\u1ef1a ch\u1ecdn,\nNh\u00f3m M\u00e0u:1#Wine red\n1","positive"],["Of course! What would you like me to review? A book, movie, restaurant, product, or something else? And any specific details or aspects you want me to focus on?\nColor Family:2#Pink\n0",null],["Thi\u1ebft k\u1ebf c\u00e1 m\u1eadp \u0111\u1ed9c \u0111\u00e1o mang l\u1ea1i s\u1ef1 vui nh\u1ed9n, K\u1eb9p t\u00f3c \u0111\u1eb9p v\u00e0 th\u1eddi trang, Ph\u1ee5 ki\u1ec7n kh\u00f4ng th\u1ec3 thi\u1ebfu cho m\u1ecdi t\u00edn \u0111\u1ed3 th\u1eddi trang,\nNh\u00f3m M\u00e0u:2#Pink\n0","negative"],["Ho\u00e0n h\u1ea3o cho v\u1ebb ngo\u1ea1i h\u00ecnh th\u01b0\u1eddng ng\u00e0y ho\u1eb7c trang tr\u1ecdng, Ch\u1ea5t li\u1ec7u nh\u1ef1a cao c\u1ea5p gi\u00fap s\u1ea3n ph\u1ea9m b\u1ec1n b\u1ec9, Nhi\u1ec1u m\u00e0u s\u1eafc s\u1ed1ng \u0111\u1ed9ng \u0111\u1ec3 l\u1ef1a ch\u1ecdn,\nNh\u00f3m M\u00e0u:2#Pink\n0","positive"]]}`,
+                "op_dien_thoai": `{"columns":["Comments","Sentiment"],"index":[0,1,2,3,4],"data":[["Mua m\u00f3ng ch\u00e2n m\u00e0u tr\u1eafng ch\u1ea5t l\u01b0\u1ee3ng gi\u00e1 t\u1ed1t, freeship to\u00e0n qu\u1ed1c 0\u0110\nNh\u00f3m M\u00e0u:\u0110en, D\u00f2ng s\u1ea3n ph\u1ea9m t\u01b0\u01a1ng th\u00edch:iPhone 11 Pro Max\n0","positive"],["H\u00e0ng ch\u00ednh h\u00e3ng ch\u1ea5t l\u01b0\u1ee3ng t\u1ed1t ! Shop giao h\u00e0ng nhanh ch\u00f3ng v\u00e0 \u0111\u00f3ng g\u00f3i c\u1ea9n th\u1eadn !! L\u1ea7n t\u1edbi s\u1ebd ti\u1ebfp t\u1ee5c mua h\u00e0ng c\u1ee7a shop !!\nColor Family:Transparent, Compatibility by Model:iPhone 15 Pro\n0","positive"],["\u1ed0p gi\u1ed1ng \u1ea3nh nh\u01b0ng m\u00e0 n c\u1ee9 b\u1ecb l\u1ec7ch ch\u1ed7 camera kh\u00f4ng k\u00edn vi\u1ec1n n\u00ean kh\u00e1 kh\u00f3 ch\u1ecbu mk b\u1ecb ocd\nColor Family:Black, Compatibility by Model:iPhone 14\n0","negative"],["Qu\u00e1 \u01b0ng lunnn, \u0111\u01a1n gi\u1ea3n nhma sang c\u1ef1c k\u00ec, h\u01a1n c\u1ea3 trong t\u01b0\u1edfng t\u01b0\u1ee3ng c\u1ee7a m\u00ecnh\nNh\u00f3m M\u00e0u:B\u1ea1c, D\u00f2ng s\u1ea3n ph\u1ea9m t\u01b0\u01a1ng th\u00edch:iPhone 11 Pro\n0","positive"],["Qu\u00e1 \u0111\u1ec7p. S\u1ebd mua l\u1ea1i 4 c\u00e1i n\u1eefa. S\u00e0i ch\u1eafc ch\u1eafn ok. M\u1ecdi ng\u01b0\u1eddi n\u00ean mua nha\nNh\u00f3m M\u00e0u:V\u00e0ng, D\u00f2ng s\u1ea3n ph\u1ea9m t\u01b0\u01a1ng th\u00edch:iPhone XR\n0","positive"]]}`,
+                "loa_bluetooth": `{"columns":["Comments","Sentiment"],"index":[0,1,2,3,4],"data":[["K\u00edch th\u01b0\u1edbc nh\u1ecf g\u1ecdn, d\u1ec5 mang theo, ch\u1ea5t \u00e2m t\u1ea1m \u0111\u01b0\u1ee3c. Ti\u1ec1n n\u00e0o c\u1ee7a \u1ea5y n\u00ean kh\u00f4ng \u0111\u00f2i h\u1ecfi g\u00ec h\u01a1n.\nNh\u00f3m M\u00e0u:\u0110en\n0",null],["D\u1ec5 s\u1eed d\u1ee5ng v\u00e0 c\u00e0i \u0111\u1eb7t, K\u00edch th\u01b0\u1edbc nh\u1ecf g\u1ecdn, d\u1ec5 mang theo, Thi\u1ebft k\u1ebf nh\u1ecf g\u1ecdn v\u00e0 c\u1ea7m tay,\nNh\u00f3m M\u00e0u:\u0110en\n0","positive"],["loa \u0111\u1eb9p ch\u1ea5t, gi\u00e1 bt l\u00e0 500k nh\u01b0ng m\u00ecnh ngh\u0129 n\u00f3 kho\u1ea3ng 200k \u0111\u1ebfn 250k l\u00e0 \u0111\u1eb9p. D\u00f9 sao th\u00ec loa v\u1eabn \u0111\u00e1ng ti\u1ec1n nha c\u00e1c b\u1ea1n.\nNh\u00f3m m\u00e0u:M\u00e0u \u0111en nh\u1ea1t\n2",null],["loa ok. h\u00e0i longg gi\u00e1 r\u1ebb x\u00e0i h\u01a1n ch\u1ea5t l\u01b0\u1ee3ng okkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk\nNh\u00f3m m\u00e0u:M\u00e0u \u0111en nh\u1ea1t\n0","positive"],["loa hay d\u1ec5 c\u1ea7m tay \u00e2m thanh \u1ed5n trong t\u1ea7m gi\u00e1 nghe qu\u00e1 ok lu\u00f4n\nNh\u00f3m M\u00e0u:\u0110en nh\u1ea1t\n0","positive"]]}`
+            };
+            document.getElementById('display').innerText = data[buttonId];
+        }
+    </script>
+</body>
+</html>
